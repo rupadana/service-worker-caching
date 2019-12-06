@@ -1,0 +1,21 @@
+{
+    "name": "Rupadana | Blog",
+    "short_name": "Rups Blog",
+    "description": "Ini adalah blog saya yang dibangun menggunakan aplikasi PWA",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#c62828",
+    "theme_color": "#c62828",
+    "icons": [
+        {
+            "src": "icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+}

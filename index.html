@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Rupadana | Blog</title>
+  <meta name="description" content="Rupadana"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/materialize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="/manifest.json">
+  <script src="js/jquery.min.js"></script>
+  <meta name="theme-color" content="#c62828"/>
+</head>
+<body>
+  
+  <!-- Navigasi -->
+  <nav class="red darken-3" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo hide-on-super-small-only">Rups Blog</a>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger">&#9776;</a>
+
+      <ul class="topnav right hide-on-med-and-down"></ul>
+      <ul id="nav-mobile" class="sidenav"></ul>
+    </div>
+  </nav>
+  <!-- Akhir Navigasi -->
+  
+    <div class="body-content">
+
+    </div>
+
+
+  <script src="js/script.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script>
+    function status(response) {
+      if(response.status !== 200){
+        return Promise.reject(response.statusText)
+      } else {
+        return Promise.resolve(response)
+      }
+    }
+
+    function json (result) {
+      return result.json();
+    }
+
+    fetch('https://readerapi.codepolitan.com/articles')
+    .then(status)
+    .then(json)
+    .then(result => {
+      console.log(result)
+    })
+    .catch(error => {
+      console.log("Error: " + error)
+    })
+  </script>
+</body>
+</html>
